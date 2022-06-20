@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-	 <StartupObject>myProgram.Array_demos.Sum_of_array</StartupObject> 
+	 <StartupObject>myProgram.Array_demos.Merge_array</StartupObject> 
   </PropertyGroup>
 
   <ItemGroup>
