@@ -353,4 +353,87 @@ namespace myProgram.Array_demos
         }
     }
 
+    class Perfect_square
+    {
+        static void Main(string[] args)
+        {
+            int[] a = { 11, 12, 36, 79, 25, 65, 45, 81 };
+            int i;  
+            foreach(int m in a)
+            {
+                for(i=1; i<m; i++)
+                {
+                    if (i * i==m)
+                    {
+                        Console.WriteLine("perfect squre="+ m);
+                    }
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+
+    class Replace_number
+    {
+
+        static void Main(string[] args)
+        {
+            
+            int[] arr = { 26, 0, 67, 45, 0, 78, 54, 34, 10, 0, 34 };
+            int count = 0;
+
+            for(int i=0; i<arr.Length; i++)
+            {
+                if (arr[i] == 0)
+                {
+                    arr[i] = 1;
+                    count++;
+                }
+            }
+           
+
+            for (int i = 0; i <arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+
+        }
+    }
+
+    class Number
+    {
+        static void Main(string[] args)
+        {
+            int [] var = new int[10];
+
+            for (int i = 0; i < 10; ++i)
+            {
+                var[i] = i;
+                Console.WriteLine(var[i] + "  ");
+                i++;
+
+            }
+        }
+    }
+
+    class Array_output
+    {
+        static void Main(string[] args)
+        {
+            int[] a1; int [] a2;
+            a1 = new int[]{ 1, 2, 3 };
+            a2 = new int [a1.Length];
+
+            for (int i = 0; i < a1.Length; i++)
+            {
+                a2[i] = a1[i];
+            }
+            for (int i = 0; i < a2.Length; i++)
+            {
+
+                Console.WriteLine(a2[i]);
+            }
+
+        }
+    }
 }
