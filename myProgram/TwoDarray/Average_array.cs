@@ -14,13 +14,13 @@ namespace myProgram.TwoDarray
                 for (int i = 0; i < a.GetLength(0); i++)
                 {
                     int sum = 0;
-                    float average = 0.07f;
+                    float average = 0;
                     for (int j = 0; j < a.GetLength(1); j++)
                     {
                         sum = sum + a[i, j];
                         Console.Write(a[i, j] + " ");
                     }
-                    average = (float)sum / a.GetLength(1);
+                    average = sum / a.GetLength(1) ;
                     Console.Write("average= " + average);
                     Console.WriteLine();
                 }
@@ -57,7 +57,7 @@ namespace myProgram.TwoDarray
                 int[,] arr1 = new int[20, 20];
                 int[,] arr2 = new int[20, 20];
                 int[,] arr3 = new int[20, 20];
-               
+                // setting matrix row and columns size
                 n = 3;
                 Console.Write("Enter elements in the first matrix:\n");
                 for (i = 0; i < n; i++)

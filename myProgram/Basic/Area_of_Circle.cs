@@ -20,4 +20,19 @@ namespace myProgram.Basic
 
         }
     }
+
+
+
+    class Addition
+    {
+        static void Main(string[] args)
+        {
+            int x=4, y=8, z=15;
+            int sum;
+
+            sum = x + y + z;
+
+            Console.WriteLine(sum);
+        }
+    }
 }

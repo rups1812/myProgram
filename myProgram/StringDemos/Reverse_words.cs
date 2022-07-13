@@ -12,7 +12,7 @@ namespace myProgram.StringDemos
         {
             string[] s = str.Split(' ');
             string reverse = "";
-            for (int i = 0; i < s.Length; i++)
+            for(int i=0; i<s.Length; i++)
             {
 
                 if (i == 0 || i == s.Length - 1)
@@ -23,14 +23,14 @@ namespace myProgram.StringDemos
                 {
                     string word = s[i];
                     string reverseword = "";
-
-                    for (int j = word.Length - 1; j >= 0; j--)
-                    {
-                        reverseword = reverseword + word[j];
-                    }
-                    reverse = reverse + " " + reverseword;
+                
+                for(int j=word.Length-1;j>=0; j--)
+                {
+                    reverseword = reverseword + word[j];
                 }
+                reverse = reverse + " " + reverseword;
             }
+                }
 
             return reverse;
 

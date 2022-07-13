@@ -334,14 +334,14 @@ namespace myProgram.loops
             int sqr = num * num;
             int count = 0;
 
-            while(num>0)
+            while (temp > 0)
             {
                 count++;
-                num = num / 10;
+                temp = temp / 10;
             }
 
             int power = 1;
-            for(int i=1; i<=count; i++)
+            for (int i = 1; i <= count; i++)
             {
                 power = power * 10;
             }
@@ -350,6 +350,7 @@ namespace myProgram.loops
             int remainder = sqr % power;
 
             int sum = division + remainder;
+        
             if (sum == num)
             {
                 Console.WriteLine(num + " Is a Kaprekar number");

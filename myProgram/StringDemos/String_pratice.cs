@@ -21,9 +21,7 @@ namespace myProgram.StringDemos
             str = str + "c#";
 
             Console.WriteLine(str.GetHashCode());
-            Console.WriteLine(str);
-
-            
+            Console.WriteLine(str);           
 
         }
     }
@@ -45,6 +43,49 @@ namespace myProgram.StringDemos
             string newLower = newUpper.ToLower();
             Console.WriteLine(newLower);
             Console.WriteLine("...............");
+
+
+            char[] ch = str.ToCharArray();
+            Console.WriteLine(string.Join("",ch));
+            Console.WriteLine("////////////////////");
+            string substringnew = str.Substring(3);
+            Console.WriteLine(substringnew);
+            Console.WriteLine("..........................");
+
+
+            string sub2 = str.Substring(3, 6);
+            Console.WriteLine(sub2);
+            Console.WriteLine("/////////////////////////");
+
+
+            Console.WriteLine(str[0]+" "+str[str.Length-1]);
+            Console.WriteLine(".................");
+
+            string[] word = str.Split(" ");
+
+            foreach(string st in word)
+            {
+                Console.WriteLine(st);
+            }
+
+
+            Console.WriteLine(str.IndexOf('i'));
+            Console.WriteLine(str.LastIndexOf('i'));
+
+            
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+            foreach (string i in cars)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
