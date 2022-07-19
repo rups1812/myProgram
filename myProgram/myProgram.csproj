@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-	 <StartupObject>myProgram.StringDemos.UpeerTolower</StartupObject> 
+	 <StartupObject>myProgram.Exception_handling.Exception_nested</StartupObject> 
   </PropertyGroup>
 
   <ItemGroup>
