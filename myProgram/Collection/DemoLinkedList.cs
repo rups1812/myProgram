@@ -24,11 +24,13 @@ namespace myProgram.Collection
             ll.Remove(150);
 
 
-            foreach(int data in ll)
+            foreach (int data in ll)
             {
                 Console.WriteLine(data);
             }
 
         }
     }
+
+
 }

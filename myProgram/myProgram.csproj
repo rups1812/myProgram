@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-	 <StartupObject>myProgram.Collection.DemoLinkedList</StartupObject> 
+	 <StartupObject>myProgram.Collection.DemoHash</StartupObject> 
   </PropertyGroup>
 
   <ItemGroup>
