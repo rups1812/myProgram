@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace myProgram.Collection
-{
+{/*
     class Student:IComparable<Student>
     {
         string name;
@@ -49,12 +49,12 @@ namespace myProgram.Collection
 
             slist.ForEach(s1 => Console.WriteLine(s1));
 
-           /* List<Student> st = slist.FindAll(sobj => sobj.Percent > 90);
+           *//* List<Student> st = slist.FindAll(sobj => sobj.Percent > 90);
             foreach(Student s in slist)
             {
                 if(s.Percent>90)
                     Console.WriteLine(s);
-            }*/
+            }*//*
         }
-    }
+    }*/
 }

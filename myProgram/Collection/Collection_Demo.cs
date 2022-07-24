@@ -29,6 +29,8 @@ namespace myProgram.Collection
             obj.Ob = "xyz";
             string s = obj.Ob;
 
+            Console.WriteLine(s);
+
 
 
             k k = new k();
@@ -36,6 +38,8 @@ namespace myProgram.Collection
             k.Ob = 90;
 
             int m = (int)k.Ob;
+
+            Console.WriteLine(m);
         }
 
     }

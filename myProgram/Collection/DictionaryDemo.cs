@@ -57,7 +57,7 @@ namespace myProgram.Collection
             Console.WriteLine(str2.GetHashCode());*/
 
 
-
+/*
             Dictionary<Student, string> dd = new Dictionary<Student, string>();
             dd.Add(new Student("jyoti", 90, "BE"), "Java");
             dd.Add(new Student("jyoti", 90, "BE"), "Java");
@@ -66,7 +66,7 @@ namespace myProgram.Collection
             foreach(KeyValuePair<Student, string> kv in dd)
             {
                 Console.WriteLine(kv.Key+" "+kv.Value);
-            }
+            }*/
 
         }
     }
