@@ -270,7 +270,7 @@ namespace myProgram.Collection
 
             emp.ForEach(e1 => Console.WriteLine(e1));
 
-            Dictionary<Employee, object> dictionaryEmp = new Dictionary<Employee, object>();
+           
 
            
         }
@@ -513,6 +513,140 @@ namespace myProgram.Collection
             }
 
 
+        }
+    }
+
+
+    class Dept
+    {
+        string dname;
+
+        public Dept(string dname)
+        {
+            this.dname = dname;
+        }
+
+        public string Dname { get => dname; set => dname = value; }
+    }
+
+    class Emp
+    {
+        int id;
+        string ename;
+        Dept d;
+
+        public Emp(int id, string ename, Dept d)
+        {
+            this.id = id;
+            this.ename = ename;
+            this.d = d;
+        }
+
+        public override string ToString()
+        {
+            return $"ID:{id} Name:{ename} Deptname:{d.Dname}";
+        }
+
+        public int Id { get => id; set => id = value; }
+        public string Ename { get => ename; set => ename = value; }
+        internal Dept D { get => d; set => d = value; }
+    }
+    class DemoLinkedLists
+    {
+        static void Main(string[] args)
+        {
+            LinkedList<Emp> ee = new LinkedList<Emp>();
+
+            ee.AddLast(new Emp(101, "Akash", new Dept("IT")));
+            ee.AddLast(new Emp(201, "Rahul", new Dept("Sales")));
+            ee.AddLast(new Emp(301, "Vedant", new Dept("Marketing")));
+            ee.AddLast(new Emp(401, "Darshan", new Dept("IT")));
+            ee.AddLast(new Emp(501, "Paresh", new Dept("Testing")));
+            ee.AddLast(new Emp(601, "Omkar", new Dept("IT")));
+            ee.AddLast(new Emp(701, "Haresh", new Dept("Sales")));
+
+            string dname = "";
+            foreach(Emp e in ee)
+            {
+                if(e.Id==10)
+                {
+                    dname = e.D.Dname;
+                    break;
+                }
+            }
+
+            for(int i=0; i<ee.Count; i++)
+            {
+                Emp ob = ee.ElementAt(i);
+                if(ob.D.Dname==dname)
+                {
+                    ee.Remove(ob);
+                }
+            }
+
+            for(int i=0; i<ee.Count; i++)
+                Console.WriteLine(ee.ElementAt(i));
+        }
+    }
+
+
+    class Order
+    {
+        int orderid;
+        string itemname;
+        string city;
+        string status;
+
+        public Order(int orderid, string itemname, string city, string status)
+        {
+            this.orderid = orderid;
+            this.itemname = itemname;
+            this.city = city;
+            this.status = status;
+        }
+
+        public int Orderid { get => orderid; set => orderid = value; }
+        public string Itemname { get => itemname; set => itemname = value; }
+        public string City { get => city; set => city = value; }
+        public string Status { get => status; set => status = value; }
+    }
+
+    class DemoD
+    {
+        static void Main(string[] args)
+        {
+            List<Order> orderlist = new List<Order>();
+            orderlist.Add(new Order(101, "Laptop", "Pune", "Delivered"));
+            orderlist.Add(new Order(102, "Mobile", "Pune", "Pending"));
+            orderlist.Add(new Order(103, "TV", "Mumbai", "Pending"));
+            orderlist.Add(new Order(104, "MusicSystem", "Nashik", "Delivered"));
+            orderlist.Add(new Order(105, "Headphone", "Nashik", "Pending"));
+            orderlist.Add(new Order(106, "AC", "Pune", "Pending"));
+
+
+            Dictionary<string, int> d1 = new Dictionary<string, int>();
+
+            foreach(Order or in orderlist)
+            {
+                if(or.Status=="Pending")
+                {
+                    if(d1.ContainsKey(or.City))
+                    {
+                        int oldval = d1[or.City];
+                        d1[or.City] = oldval + 1;
+
+                    }
+                    else
+                    {
+                        d1.Add(or.City, 1);
+                    }
+                }
+            }
+
+            foreach(KeyValuePair<string, int> kv in d1)
+            {
+                Console.WriteLine(kv.Key+"==>"+kv.Value);
+            }
         }
     }
 

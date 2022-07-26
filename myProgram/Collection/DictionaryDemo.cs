@@ -70,4 +70,31 @@ namespace myProgram.Collection
 
         }
     }
+
+
+
+    class Frequency
+    {
+        static void Main(string[] args)
+        {
+            string s1 = "aayush";
+            char[] arr = s1.ToCharArray();
+
+            Dictionary<char, int> d1 = new Dictionary<char, int>();
+
+            foreach(char ch in arr)
+            {
+                if (d1.ContainsKey(ch))
+                {
+                    int curval = d1[ch];
+                    d1[ch] = curval + 1;
+                }
+                else
+                    d1.Add(ch, 1);
+            }
+
+            foreach(KeyValuePair<char, int> kv in d1)
+                Console.WriteLine(kv.Key+"==>"+kv.Value);
+        }
+    }
 }
