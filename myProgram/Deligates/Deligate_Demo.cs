@@ -19,7 +19,7 @@ namespace myProgram.Deligates
         static void Main(string[] args)
         {
             //Set a target
-            Deligate_Demo ob = new Deligate_Demo();                  //declare a delecate
+            Deligate_Demo ob = new Deligate_Demo();                  //declare a delegate
                                                                      //set a target
                                                                      //Invoke
                                                                      //Emp e1 -- reference emp object
