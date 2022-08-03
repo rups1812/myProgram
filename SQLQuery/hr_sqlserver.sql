@@ -288,3 +288,23 @@ select department_id, count(*) from employees group by department_id having coun
 
 
 select * from employees where job_id=(select job_id from jobs where job_title='programmer');
+
+select first_name,department_name from employees inner join departments on employees.department_id=departments.department_id;
+
+select first_name,job_title from employees e inner join jobs j on e.job_id=j.job_id;
+
+select first_name,department_name,job_title from employees e inner join departments d on e.department_id=d.department_id inner join jobs j on e.job_id=j.job_id;
+
+select department_name,count(*) from departments d inner join employees e on e.department_id=d.department_id group by department_name;
+
+update employees set salary=salary+10000 where department_id=(select department_id from departments where department_name='Excutive');
+
+update employees set salary=salary+10000 from employees e inner join departments d on e.department_id=d.department_id where department_name='Excutive';
+
+select * from employees e1 where salary>=(select avg(salary) from employees e2 where e2.department_id=e1.department_id);
+
+-- find 5th max salary
+
+select distinct salary from employees order by salary desc offset 4 row fetch next 1 row only;
+
+select * from employees e1 where 5=(select count(distinct (salary)) from employees e2 where e2.salary>=e1.salary);
