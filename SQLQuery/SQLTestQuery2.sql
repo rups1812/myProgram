@@ -8,6 +8,11 @@ pin_code bigint,
 totalRequests int
 );
 
+
+
+insert into Customer values (101 , 'John' , 'St Sant Road' , 'UK' , 'London' , 589658 , 1 ) , 
+(102 , 'John' , 'St Sant Road' , 'UK' , 'London' , 589658 , 1 );
+
 select * from Customer;
 
 create table Service_Request
@@ -28,6 +33,8 @@ create table Service_Status(
 status_id int primary key check (status_id < 5 ),
 );
 
+select * from Service_Status;
+
 Alter table service_status
 add status_desc varchar(30);
 -- values of id and desc are (1-OPEN, 2- IN_PROGRESS, 3-CLOSED,4-Cancelled)
@@ -35,7 +42,7 @@ add status_desc varchar(30);
 
 create table Employee(
 emp_id int primary key, 
-name varchar(20), 
+ename varchar(20), 
 age int check (age>18),
 requestsCompleted varchar(20),
 emp_rating int 
@@ -51,11 +58,12 @@ sp_help Customer;
 --1.Write a query to create Employee table.
 create table Employee(
 emp_id int primary key, 
-name varchar(20), 
+ename varchar(20), 
 age int check (age>18),
 requestsCompleted varchar(20),
 emp_rating int 
 );
+select * from Employee;
 
 --2.Write a query to add column totalRequests (integer) to customer table (Assume it was not present earlier)
 alter table Customer add totalRequest int;
@@ -71,9 +79,10 @@ select name from customer where cust_id not in(select cust_id from Service_Reque
 
 
 --6.Show employee name, total charges of all the requests served by that employee. Consider only ‘closed’ requests.
-select name,sum(charges) from Employee e inner join Service_Request sr on e.emp_id=sr.emp_id inner join Service_Status ss on sr.status_id=ss.status_id where status_desc='closed' group by sr.emp_id;
+select ename,sum(charges) from Employee e inner join Service_Request sr on e.emp_id=sr.emp_id inner join Service_Status ss on sr.status_id=ss.status_id where status_desc='closed' group by sr.emp_id;
 
 --7.Show service description, customer name of request having third highest charges.
+select service_desc,name from Customer c inner join Service_Request s  on c.cust_id=s.cust_id;
 
 
 --8.Delete all requests served by ‘Sam’ as he has left the company.
@@ -86,11 +95,14 @@ delete from Service_Request where status_id = (select status_id from Service_Sta
 update Service_Request set charges=charges*0.1 where charges < 100;
 
 --11.Update totalRequests of customer table. TotalRequests should be total requests given by that customer.
+update Customer set totalRequests=
 
 
 --12.Create a view which will show customer name, service desc , employee name, service charges , status desc of requests which are not closed.
 
 
 --14.Give one example of left outer join using above database.
+select name,service_id from Customer c left join Service_Request sr on c.cust_id=sr.charges;
 
 --15.Show name of all employees who have same rating as employee ‘John’ 20.State at least 4 aggregate functions used in sql.
+select COUNT(*),name from Customer where cust_id in(select cust_id from Service_Request where emp_id=(select emp_id from Employee where emp_rating=(select emp_rating from Employee where ename='john')));

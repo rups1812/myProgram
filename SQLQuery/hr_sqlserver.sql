@@ -308,3 +308,5 @@ select * from employees e1 where salary>=(select avg(salary) from employees e2 w
 select distinct salary from employees order by salary desc offset 4 row fetch next 1 row only;
 
 select * from employees e1 where 5=(select count(distinct (salary)) from employees e2 where e2.salary>=e1.salary);
+
+select rownum,* from (select *, row_number() over(order by employee_id) as rownum from employees)as t where t.rownum%2=1;
