@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+
+		function Add() {
+			var data="";
+			data=data+" Name:"+document.getElementById("fname").value;
+
+			var arr=document.getElementsByName("ck1");
+			console.log(arr);
+			data=data+"<br> Hobbies:"
+			for(var i=0;i<arr.length;i++)
+			{
+				if(arr[i].checked)
+				{
+					data=data+arr[i].value;
+				}
+			}
+
+			var genderarr=document.getElementsByName("r1");
+			data=data+"<br> Gender:"
+			for(var i=0; i<genderarr.length;i++)
+			{
+				if(genderarr[i].checked)
+				{
+					data=data+genderarr[i].value;
+					break;
+				}
+			
+			}
+
+			var scity=document.getElementById("city");
+			var idx=scity.selectedIndex;
+			alert(idx);
+			data=data+"<br> City:"+scity.options[idx].value;
+			document.getElementById("d1").innerHTML=data;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Name:<input type="text" id="fname"><br>
+		Hobby:<input type="checkbox" name="ck1" value="Reading">Reading
+		<input type="checkbox" name="ck1" value="Cricket">Cricket
+		<input type="checkbox" name="ck1" value="Music">Music
+		<br>
+		Gender:<input type="radio" name="r1" value="Male">Male
+		<input type="radio" name="r1" value="Female">Female
+		<br>
+		City:<select id="city">
+			<option value="Pune">Pune</option>
+			<option value="Mumbai">Mumbai</option>
+			<option value="Nashik">Nashik</option>
+		</select>
+		<br>
+		<input type="button" value="Add" onclick="Add()">
+		<div id="d1"></div>
+	</form>
+
+</body>
+</html>
