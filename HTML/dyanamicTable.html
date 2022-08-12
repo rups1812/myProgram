@@ -4,33 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dyanamic Table</title>
-	
-</head>
-<body>
-	<h1>Student Data</h1>
-	<form>
-		Name:<input type="test" name="name" id="fname">
-		Percentage:<input type="number" name="percentage" id="percent">
-		<br><br>
-		<input type="button" name="Add" value="Add Data" onclick="addStudent()"><hr>
 
-
-
-		    <table id="tb1" class="table" border="1">
-		    	 <thead>
-		    	<th>Name</th>
-		    	<th>Percentage</th>
-
-		    	<tbody>
-		    		
-		    	</tbody>
-		    </thead>
-		    </table>
-		   
-
-	</form>
-	<form>
-		<script type="text/javascript">
+	<script type="text/javascript">
 		function addStudent(){
 			var name=document.getElementById("fname").value;
 			var percentage=document.getElementById("percent").value;
@@ -45,10 +20,29 @@
 
 			document.getElementById("tb1").appendChild(tr);
 		}
-	</script>
+	</script>	
+</head>
+<body>
+	<h1>Student Data</h1>
+	<form>
+		Name:<input type="test" name="name" id="fname">
+		Percentage:<input type="number" name="percentage" id="percent">
+		<br><br>
+		<input type="button" name="Add" value="Add Data" onclick="addStudent()"><hr>
+
+		    <table id="tb1" class="table" border="1">
+		    	 <thead>
+		    	<th>Name</th>
+		    	<th>Percentage</th>
+
+		    	<tbody>
+		    		
+		    	</tbody>
+		    </thead>
+		    </table>
+		   
+
 	</form>
-
-
-
+			
 </body>
 </html>

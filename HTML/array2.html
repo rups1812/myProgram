@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+
+		var a=[11,12,13,15]
+
+		var[b,c,d,e]=a;
+		console.log(a);
+		console.log(b);
+		console.log(c);
+
+		//rest spread operator
+
+
+		//rest
+
+		/*function m1(a,b,c){
+			console.log("Sum="+(a+b+c));
+		}
+		m1(1,2,3);*/
+
+
+		//spread
+
+		function m1(a,b,c){
+			console.log("Sum="+(a+b+c));
+		}
+		var myarray=[11,12,13];
+
+		var myarray(...myarray);
+		
+
+
+		function m2(x,y,...a){
+			var sum=0;
+			for(var i=0; i<a.length;i++)
+			{
+				alert("Summm="+sum);
+			}
+		}
+
+		m2(1,2,3,4,5,6,7,8,9);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

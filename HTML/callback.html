@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+		//call back function
+		function greet(nm){
+			console.log("Good morning,"+nm);
+			return 10;
+		}
+
+		var x =greet;
+		var r=x("Rupesh");
+
+		var m=90;
+		function m1(){
+			console.log("in m1");
+		}
+
+		var y=function()
+		{
+			console.log("Bye");
+		}
+
+		y();
+
+
+
+
+		var n=function(a,b)
+		{
+			alert("sum= "+(a+b));
+		}
+
+		n(10,20);
+
+		var m=(a,b)=>alert("Addition= "+(a+b));
+
+		m(30,40);
+
+		function greet()
+		{
+			console.log("Welcome to ThinkQutionet");
+		}
+
+		function login(username,pass,f1)
+		{
+			f1();
+			if(username=="Admin" && pass=="123")
+				console.log("Successful Login");
+			else
+				console.log("Invalid Login");
+		}
+
+		login("Admin","123",greet);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
