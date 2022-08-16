@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<!-- 5.Write a code and show the three main ways to apply CSS in web page.
+	internal css -->
+	<style>
+        body {
+        background-color: darkcyan;
+        }
+          h1 {
+          color: red;
+          padding: 60px;
+             } 
+</style>
+	<script type="text/javascript">
+		//1.Show use of filter() with appropriate example
+		let numbers=[1,2,3,4,5,6,7,8,9,10];
+
+		function checkEven(num){
+			if(num%2==0)
+				return true;
+			else
+				return false;
+		}
+
+		let evenNumbers=numbers.filter(checkEven);
+		console.log(evenNumbers);
+	</script>
+	<script type="text/javascript">
+		//2.Consider an array of employee [id,name,salary,location] Use array method to print those employees whose salary is greater than 10000.
+		var Employee=[{id:1,name:"Rupesh",salary:25000,location:"Pune"},
+		{id:2,name:"Ajinkya",salary:8000,location:"Nashik"},
+		{id:3,name:"Vaibhav",salary:12000,location:"Mumbai"}];
+
+		var salaries=Employee.filter(i=>i.salary>10000);
+		console.log(salaries);
+
+	</script>
+	<script type="text/javascript">
+		//3.WAP in JS to show difference is between == and ===, let var and const?
+	console.log(9=="9");
+	console.log(9==="9");
+	console.log("rupesh"== new String("rupesh"));
+	console.log("rupesh"=== new String("rupesh"));
+	//var
+	var greet = "Hello " // global variable
+
+    function myfunction(){
+
+       var msg = "JavaScript!"; 
+       alert(greet + msg); //can access global and local variable
+    }
+
+    myfunction();
+
+    //let
+    let x =20;   
+     document.write("Outside the function x = " + x);   
+  
+    function show(){   
+    document.write("<br> Inside the function x = " + x);   
+       }   
+    show();   
+
+    //const
+     const y = 22;
+    {
+        const y = 90;
+        console.log(y);
+   
+        {
+            const y = 77;
+            console.log(y);
+        }
+        {
+            const y = 45;
+            console.log(y);
+        }
+    }
+    console.log(y);
+  
+	</script>
+	<script type="text/javascript">
+
+    //4.WAP in JS to explain fat arrow function .
+    var show = (a,b,c) => {  
+    console.log(a + " " + b + " " + c );  
+             }  
+    show(100,200,300);  
+
+	</script>
+
+
+	<script type="text/javascript">
+		//6.Write a code to explain call back function.
+		function greeting(name) {
+                 alert(`Hello, ${name}`);
+                      }
+
+        function processUserInput(callback) {
+        const name = prompt('Please enter your name.');
+        callback(name);
+        }
+
+        processUserInput(greeting);
+	</script>
+
+	<script type="text/javascript">
+		
+	</script>
+
+</head>
+<body>
+	<!-- inline css -->
+
+<h1 style="color:white;padding:30px;">Tutorials</h1>
+<pstyle="color:white;>This is our paragraph.</p>
+   //7.Write a code to use a bootstrap class jumbroton and also on button 
+	<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+
+</body>
+</html>
