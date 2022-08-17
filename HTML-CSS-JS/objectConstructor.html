@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+
+		function student(sid,sname,per){
+
+			this.rollno=sid;
+			this.studentName=sname;
+			this.percent=per;
+		}
+
+		student.prototype.display=function()
+		{
+			console.log("rollno"+this.roll+" Name"+this.studentName+" Percentage"+this.percent);
+		}
+
+		var ob1=new student(2,"rupesh",98);
+		var ob2=new student(3,"Ajinkya",89);
+		ob1.display();
+		ob2.display();
+
+
+		console.log(ob1);
+		console.log(ob2);
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

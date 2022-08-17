@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+		var a=[];
+		var b={"sid":101,"sname":"Ajinkya","percent":90};
+		var c={"sid":102,"sname":"Vaibhav","percent":90};
+		console.log(b);
+		document.write(JSON.stringify(b));
+		console.log(b.sid);
+		console.log(b.sname);
+		console.log(b.percent);
+
+		console.log("sid:"+b["sid"]);
+		console.log("sname:"+b["sname"]);
+
+		b.city="Pune";
+		b["Mobile"]=9867541256;
+		b["sname"]="deepa";
+		delete b.sname;
+		console.log(b);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

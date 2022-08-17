@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+		var e1={"id":101,
+		        "name":"Kunal",
+		        "display":function(a)
+		        {
+		        	console.log(this);
+		        	console.log("IDD:"+this.id+" Name:"+this.name);
+	               }
+		        };
+
+		        //e1.display();
+
+		        var s2={"id":1001,"name":"Sushant"};
+		        var d1=e1.display;
+		        d1.call(s2,10);
+		        console.log(d1);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
