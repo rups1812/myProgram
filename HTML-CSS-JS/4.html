@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+
+		var sarr=[];
+		
+
+		function Add(){
+
+			var a=document.getElementById("s1").value;
+			var b=document.getElementById("s2").value;
+
+			var sobj= new Student(a,b);
+			sarr.push(sobj);
+
+
+			console.log(sarr);
+
+		}
+
+
+
+
+		function Student(nm,per){
+
+			this.Studentname=nm;
+			this.Percent=per;
+
+	
+		}
+	</script>
+</head>
+<body>
+
+	Studentname:<input type="text" id="s1"><br><br>
+	Percent:<input type="text" id="s2"><br>
+	<input type="button" value="Add" onclick="Add()">
+
+</body>
+</html>

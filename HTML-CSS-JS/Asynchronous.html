@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+
+		function greet()
+		{
+			alert("Good Morning.............");
+		}
+
+		var timeid=setTimeout(greet,5000);
+		console.log("Welcome");
+		console.log("Sum"+(11*2));
+
+
+		var intervalid=setInterval(greet,3000);
+
+		function Stop()
+		{
+			clearInterval(intervalid);
+		}
+		console.log("after");
+
+	</script>
+</head>
+<body>
+	<button onclick="Stop()">clear interval</button>
+
+</body>
+</html>
