@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+
+		function m1() {
+			alert("m1 called");
+		}
+
+		function m2() {
+			alert("m2 called");
+		}
+
+		function m3() {
+			alert("m3s called");
+		}
+		
+
+	</script>
+	<style type="text/css">
+		.a1{background-color: pink;height: 200px;}
+		.a2{background-color: cyan;height: 100px;}
+		.a2{background-color: orange;height: 80px;}
+	</style>
+</head>
+<body>
+<div id="d1" class="a1" >
+		<div id="d2" class="a2">
+			<h1 id="h1" class="a3">Online Tutorial</h1>
+		</div>
+	</div>
+	<script type="text/javascript">
+		
+		var div1=document.getElementById("d1");
+		var div2=document.getElementById("d2");
+		var h1=document.getElementById("h1");
+
+		div1.addEventListener('click',m1,true);
+		div2.addEventListener('click',m2,true);
+		h1.addEventListener('click',m3,true);
+	</script>
+</body>
+</html>
